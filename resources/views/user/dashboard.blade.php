@@ -8,8 +8,7 @@
                 <div class="panel-heading">User Dashboard</div>
 
                 <div class="panel-body">
-                  @component('components.who')
-                  @endcomponent
+                  ESTOU NO DASHBOARD DO USUARIO
                 </div>
             </div>
         </div>

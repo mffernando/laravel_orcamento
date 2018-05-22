@@ -16,13 +16,8 @@ class AdminController extends Controller
         $this->middleware('auth:admin');
     }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        return view('dashboard'); //go to admin dashboard page
+        return view('admin.dashboard'); //go to admin dashboard page (view)
     }
 }

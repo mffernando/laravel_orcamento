@@ -18,12 +18,14 @@ Route::get('/', function () {
 Auth::routes();
 
 //user
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/users/logout', 'Auth\LoginController@userLogout')->name('user.logout');
+Route::prefix('user')->group(function(){
+  Route::get('/', 'UserController@index')->name('user.dashboard'); //user dashboard after login
+  #Route::get('/logout', ['uses' => 'Auth\LoginController@userLogout']); //logout
+});
 
 //admin
 Route::prefix('admin')->group(function(){
-  Route::get('/', 'AdminController@index')->name('admin.dashboard'); //login
+  Route::get('/', 'AdminController@index')->name('admin.dashboard'); //admin/dashboard.blade.php
   Route::get('/login', 'Auth\AdminLoginController@ShowLoginForm')->name('admin.login');
   Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
   Route::get('/logout', 'Auth\AdminLoginController@logout')->name('admin.logout');

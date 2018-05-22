@@ -8,8 +8,7 @@
                 <div class="panel-heading">Admin Dashboard</div>
 
                 <div class="panel-body">
-                  @component('components.who')
-                  @endcomponent
+                  ESTOU NO DASHBOARD DO ADM
                 </div>
             </div>
         </div>
