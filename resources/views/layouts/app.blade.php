@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+
 <html lang="{{ app()->getLocale() }}">
 <head>
     <meta charset="utf-8">
@@ -70,6 +73,9 @@
                 </div>
             </div>
         </nav>
+
+        <!--footer-->
+        @include('layouts.footer')
 
         @yield('content')
     </div>
